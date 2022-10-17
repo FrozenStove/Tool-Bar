@@ -4,27 +4,15 @@
 //     ipcMain,
 //     dialog,
 // } from 'electron';
-const {
-    app,
-    BrowserWindow,
-    ipcMain,
-    dialog,
-} = require('electron')
+const { app, BrowserWindow, ipcMain, dialog, } = require('electron')
 const path = require('path')
 
 
-// const isDev: boolean = process.env.NODE_ENV === 'development';
-// const PORT: string | number = process.env.PORT || 8080;
-
-// this is to allow the BrowserWindow object to be referrable globally
-// however, BrowserWindow cannot be created before app is 'ready'
-let mainWindow = null;
-
 const loadMainWindow = () => {
-    mainWindow = new BrowserWindow({
+    const mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
-        show: false,
+        // show: false,
         // icon: path.resolve(__dirname, '../client/assets/logo_hat.ico'),
         webPreferences: {
             nodeIntegration: true,
@@ -40,21 +28,30 @@ const loadMainWindow = () => {
 };
 
 
+app.whenReady().then(() => {
+    loadMainWindow()
 
-app.on('ready', async () => {
-    // if(isDev){
-    //   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-    //   const extensions = [REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS];
-    //   installExtension(
-    //     extensions,
-    //     {loadExtensionOptions: {allowFileAccess: true}, forceDownload: forceDownload}
-    //   ).then((name:string) => {console.log(`Added Extension: ${name}`)})
-    //    .then(loadMainWindow)
-    //   //  .catch((err: Error) => {console.log('There was an Error: ', err)})
-    // }
-    // else loadMainWindow();
-    loadMainWindow();
-});
+    app.on('activate', function () {
+        // On macOS it's common to re-create a window in the app when the
+        // dock icon is clicked and there are no other windows open.
+        if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    })
+})
+
+// app.on('ready', async () => {
+//     // if(isDev){
+//     //   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
+//     //   const extensions = [REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS];
+//     //   installExtension(
+//     //     extensions,
+//     //     {loadExtensionOptions: {allowFileAccess: true}, forceDownload: forceDownload}
+//     //   ).then((name:string) => {console.log(`Added Extension: ${name}`)})
+//     //    .then(loadMainWindow)
+//     //   //  .catch((err: Error) => {console.log('There was an Error: ', err)})
+//     // }
+//     // else loadMainWindow();
+//     loadMainWindow();
+// });
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
