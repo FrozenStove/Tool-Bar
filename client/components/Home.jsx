@@ -1,11 +1,15 @@
 import React from 'react'
+import ErrorBoundary from './ErrorBoundary'
 
 const Home = () => {
 
     return (
-        <div>
-            Hello Another World
-        </div>
+        <ErrorBoundary>
+            <div>
+                Hello Another World
+                <button>boots</button>
+            </div>
+        </ErrorBoundary>
     )
 }
 
