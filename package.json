@@ -1,0 +1,29 @@
+{
+  "name": "tool-bar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electronmon ./electron/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrozenStove/Tool-Bar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrozenStove/Tool-Bar/issues"
+  },
+  "homepage": "https://github.com/FrozenStove/Tool-Bar#readme",
+  "dependencies": {
+    "electron": "^21.1.1",
+    "electronmon": "^2.0.2",
+    "next": "^12.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5"
+  }
+}
