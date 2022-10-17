@@ -22,6 +22,7 @@ const loadMainWindow = () => {
         },
     });
 
+    // mainWindow.loadFile(path.join(__dirname, '../client/index.html'));
     mainWindow.loadFile(path.join(__dirname, '../client/index.html'));
     console.log('Main Window loaded file index.html');
 

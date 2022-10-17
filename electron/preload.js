@@ -1,4 +1,6 @@
-import { ipcRenderer, contextBridge } from 'electron';
+// import { ipcRenderer, contextBridge } from 'electron';
+
+const { ipcRenderer, contextBridge } = require('electron')
 
 // contextBridge allows for functions in main.ts to be available in the frontend
 
