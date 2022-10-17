@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electronmon ./electron/main.js"
+    "start": "electronmon ./electron/main.js",
+    "ndev": "next dev",
+    "nbuild": "next build",
+    "nstart": "next start",
+    "nlint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -25,5 +29,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1"
   }
 }
