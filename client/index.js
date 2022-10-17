@@ -1,5 +1,7 @@
 import { createRoot, Root } from 'react-dom/client';
+import React from 'react'
 import Home from './components/Home';
+import './styles.css';
 // import App from './components/App';
 
 const rootElement = document.getElementById('root');
