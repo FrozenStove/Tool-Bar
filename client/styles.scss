@@ -42,7 +42,14 @@ body {
 }
 
 footer {
-  bottom: 0px;
+  // bottom: 0px;
+  right: 0px;
+  // width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  .lower {
+    border: 1px grey solid;
+  }
 }
 
 .outerBox {

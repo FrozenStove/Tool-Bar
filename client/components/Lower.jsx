@@ -4,9 +4,23 @@ const Lower = (props) => {
 
 
     return (
-        <div className="lower">
-
-        </div>
+        <>
+            <div className="lower">
+                <button>Drafting Request</button>
+            </div>
+            <div className="lower">
+                <button>Drafting Request</button>
+            </div>
+            <div className="lower">
+                <button>Drafting Request</button>
+            </div>
+            <div className="lower">
+                <button>Drafting Request</button>
+            </div>
+            <div className="lower">
+                <button>Drafting Request</button>
+            </div>
+        </>
 
     )
 
