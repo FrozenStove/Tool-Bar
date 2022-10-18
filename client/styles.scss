@@ -3,13 +3,33 @@
   font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
   margin: 0;
   padding: 0;
-  color: blue;
-  background-color: teal;
+  /* color: blue; */
+  /* background-color: teal; */
 }
 
 body {
   padding-top: 10px;
-  background-color: red;
+  border: 1px black solid;
+}
+
+#root{
+  height: calc(100vh - 15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#upperhalf{
+  display: flex;
+  
+  .sheetcolumn {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+footer {
+  bottom: 0px;
 }
 
 .outerBox {

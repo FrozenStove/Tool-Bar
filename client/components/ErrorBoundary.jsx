@@ -1,3 +1,5 @@
+import React from 'react'
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
@@ -10,8 +12,9 @@ class ErrorBoundary extends React.Component {
     }
   
     componentDidCatch(error, errorInfo) {
+        console.log('Error Caught!')
       // You can also log the error to an error reporting service
-      logErrorToMyService(error, errorInfo);
+    //   logErrorToMyService(error, errorInfo);
     }
   
     render() {
