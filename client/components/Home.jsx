@@ -1,4 +1,5 @@
 import React from 'react'
+import Lower from './Lower';
 // import ErrorBoundary from './ErrorBoundary'
 import SpreadSheets from './SpreadSheets'
 
@@ -13,6 +14,12 @@ const Home = () => {
             "Fp Force (ASCE 7-16)": "./",
             "Fp Force (ASCE 7-10)": "./",
             "Pole Footing (CBC 2022)": "./",
+            "Pole Footing (CBC 2019)": "./",
+            "Pole Footing (CBC 2013)": "./",
+            "Diaphragm Force Level (ASCE 7-10)": "./",
+            "Diaphragm Force Level (ASCE 7-16)": "./",
+            "Drag Analysis (ASCE 7-10)": "./",
+            "Show Tables (ASCE 7-16)": "./",
         },
         {
             title: 'Concrete',
@@ -32,7 +39,9 @@ const Home = () => {
         },
         {
             title: 'Miscellaneous',
-            "Seismic Base Shear 6 (ASCE 7-16)": "./"
+            "Wall Mounted Anchorage": "./",
+            "DG 11 Vibration v2.1": "./",
+            "Wall and Wall-Floor Mounted Anchorage (ASCE 7-16)": "./",
         },
     ];
 
@@ -47,8 +56,7 @@ const Home = () => {
                 {columns}
             </div>
             <footer className='utilities'>
-                <button>"Hello, World,<br></br>and all you beautiful people in it!"</button>
-
+                <Lower />
             </footer>
         </>
     )

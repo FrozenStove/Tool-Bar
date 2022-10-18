@@ -29,7 +29,6 @@ const loadMainWindow = () => {
 
 };
 
-
 app.whenReady().then(() => {
     loadMainWindow()
 
@@ -46,68 +45,8 @@ app.on('window-all-closed', () => {
     }
 });
 
-ipcMain.handle('openFile', async (args) => {
-    console.log(args)
-    console.log('open a file');
+// NOTE: ipcMain's first argument is ALWAYS an event thing. Passed in arguments must be the 2nd one here.
+ipcMain.handle('openFile', (event, args) => {
     shell.openPath(args);
 })
 
-
-// ipcMain.handle('getAllInfo', async () => {
-//     // nodes
-
-//     const tempData = {
-//         name: 'deploy',
-//         usage: 1,
-//         resource: 'deploy',
-//         request: 0.9,
-//         limit: Math.random() + 1,
-//         parent: 'deploy',
-//         namespace: 'deploy',
-//     };
-
-//     try {
-//         const nsSelect = await mainWindow.webContents
-//             .executeJavaScript('({...localStorage});', true)
-//             /* check what type this is with team */ /* check what type this is with team */
-//             .then((localStorage) => {
-//                 return localStorage.namespace;
-//             });
-//         const getNodes = await k8sApiCore.listNode(`${nsSelect}`);
-//         const nodeData = getNodes.body.items.map(node => {
-//             return parseNode(node);
-//         }); // end of nodeData
-
-//         const getPods = await k8sApiCore.listNamespacedPod(`${nsSelect}`);
-//         // console.log('this is getPods: ',getPods.body.items[0]);
-
-//         const memData = await Promise.all(
-//             getPods.body.items.map(pod => {
-//                 // console.log('this is all pods fom k8s', pod)
-//                 return fetchMem(pod);
-//             })
-//         );
-//         const cpuData = await Promise.all(
-//             getPods.body.items.map(pod => fetchCPU(pod))
-//         );
-
-//         const filteredMem = memData;
-//         // const filteredMem = memData.filter(el => el.request > 1)
-//         const filteredCPU = cpuData.filter(el => el.resource === 'cpu');
-//         const filteredPods = filteredMem;
-
-//         for (let i = 0; i < filteredCPU.length; i++) {
-//             filteredPods.push(filteredCPU[i]);
-//         }
-
-//         if (filteredPods) {
-//             const newObj = {
-//                 Nodes: nodeData,
-//                 Pods: filteredPods,
-//             };
-//             return newObj;
-//         }
-//     } catch (error) {
-//         return [tempData];
-//     }
-// });

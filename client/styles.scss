@@ -9,11 +9,13 @@
 
 body {
   padding-top: 10px;
+  background-color: lightgray;
 }
 
 *{
   // border: 1px black solid;
 }
+
 #root{
   height: calc(100vh - 15px);
   display: flex;

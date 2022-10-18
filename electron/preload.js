@@ -13,7 +13,7 @@ contextBridge.exposeInMainWorld('api', WINDOW_API);
 */
 
 const WINDOW_API = {
-  openFile: async (args) => ipcRenderer.invoke('openFile',args),
+  openFile: (args) => ipcRenderer.invoke('openFile',args),
   // getNamespaces: async () => ipcRenderer.invoke('getNamespaces'),
   // getNodes: async () => ipcRenderer.invoke('getNodes'),
   // getDeployments: async () => ipcRenderer.invoke('getDeployments')
@@ -21,13 +21,13 @@ const WINDOW_API = {
 
 contextBridge.exposeInMainWorld('api', WINDOW_API);
 
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector)
-    if (element) element.innerText = text
-  }
+// window.addEventListener('DOMContentLoaded', () => {
+//   const replaceText = (selector, text) => {
+//     const element = document.getElementById(selector)
+//     if (element) element.innerText = text
+//   }
 
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type])
-  }
-})
+//   for (const type of ['chrome', 'node', 'electron']) {
+//     replaceText(`${type}-version`, process.versions[type])
+//   }
+// })
