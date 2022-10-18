@@ -9,9 +9,11 @@
 
 body {
   padding-top: 10px;
-  border: 1px black solid;
 }
 
+*{
+  // border: 1px black solid;
+}
 #root{
   height: calc(100vh - 15px);
   display: flex;
@@ -25,6 +27,15 @@ body {
   .sheetcolumn {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+    margin: 1rem;
+    
+    border: 1px grey solid;
+    button {
+      max-width: 10rem;
+    }
   }
 }
 

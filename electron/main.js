@@ -5,6 +5,7 @@
 //     dialog,
 // } from 'electron';
 const { app, BrowserWindow, ipcMain, dialog, } = require('electron')
+const shell = require('electron').shell;
 const path = require('path')
 
 
@@ -39,26 +40,18 @@ app.whenReady().then(() => {
     })
 })
 
-// app.on('ready', async () => {
-//     // if(isDev){
-//     //   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-//     //   const extensions = [REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS];
-//     //   installExtension(
-//     //     extensions,
-//     //     {loadExtensionOptions: {allowFileAccess: true}, forceDownload: forceDownload}
-//     //   ).then((name:string) => {console.log(`Added Extension: ${name}`)})
-//     //    .then(loadMainWindow)
-//     //   //  .catch((err: Error) => {console.log('There was an Error: ', err)})
-//     // }
-//     // else loadMainWindow();
-//     loadMainWindow();
-// });
-
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
     }
 });
+
+ipcMain.handle('openFile', async (args) => {
+    console.log(args)
+    console.log('open a file');
+    shell.openPath(args);
+})
+
 
 // ipcMain.handle('getAllInfo', async () => {
 //     // nodes

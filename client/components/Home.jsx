@@ -8,28 +8,31 @@ const Home = () => {
     const spreadSheetData = [
         {
             title: 'Analysis',
-            "Seismic Base Shear 1\n (ASCE 7-16)": "./",
-            "Seismic Base Shear 2\n (ASCE 7-16)": "./"
+            "Seismic Base Shear (ASCE 7-16)": "/Users/lennysutrisno/Documents/GitHub/Tool-Bar/Codesmith Alumni Directory.xlsx",
+            "Seismic Base Shear (ASCE 7-10)": "/Users/lennysutrisno/Documents/GitHub/Tool-Bar/test.txt",
+            "Fp Force (ASCE 7-16)": "./",
+            "Fp Force (ASCE 7-10)": "./",
+            "Pole Footing (CBC 2022)": "./",
         },
         {
             title: 'Concrete',
-            "Seismic Base Shear 2\n (ASCE 7-16)": "./"
+            "Seismic Base Shear 2 (ASCE 7-16)": "./"
         },
         {
             title: 'Steel',
-            "Seismic Base Shear 3\n (ASCE 7-16)": "./"
+            "WF Drag Conn (AISC 360-16)": "./"
         },
         {
             title: 'Masonry',
-            "Seismic Base Shear 4\n (ASCE 7-16)": "./"
+            "Shear Wall Design": "./"
         },
         {
             title: 'Wood',
-            "Seismic Base Shear 5\n (ASCE 7-16)": "./"
+            "Seismic Base Shear 5 (ASCE 7-16)": "./"
         },
         {
             title: 'Miscellaneous',
-            "Seismic Base Shear 6\n (ASCE 7-16)": "./"
+            "Seismic Base Shear 6 (ASCE 7-16)": "./"
         },
     ];
 
@@ -44,7 +47,7 @@ const Home = () => {
                 {columns}
             </div>
             <footer className='utilities'>
-                <button>"Hello, World,<br></br>\nand all you beautiful people in it!"</button>
+                <button>"Hello, World,<br></br>and all you beautiful people in it!"</button>
 
             </footer>
         </>
