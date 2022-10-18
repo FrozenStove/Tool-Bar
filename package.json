@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/FrozenStove/Tool-Bar#readme",
   "dependencies": {
-
     "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
     "sass": "^1.55.0",
     "xlsx": "^0.18.5"
   },
@@ -38,8 +38,8 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.5.1",
     "electron": "^21.1.1",
-    "electronmon": "^2.0.2",
     "electron-builder": "^23.6.0",
+    "electronmon": "^2.0.2",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
     "html-webpack-plugin": "^5.5.0",

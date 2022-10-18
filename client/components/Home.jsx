@@ -1,6 +1,6 @@
 import React from 'react'
 import Lower from './Lower';
-// import ErrorBoundary from './ErrorBoundary'
+import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import SpreadSheets from './SpreadSheets'
 
 const Home = () => {
@@ -45,20 +45,29 @@ const Home = () => {
         },
     ];
 
-    for ( let section of spreadSheetData){
+    for (let section of spreadSheetData) {
         columns.push(<SpreadSheets title={section.title} data={section} key={section.title} />)
     }
 
 
     return (
-        <>
+        <HashRouter basename="/">
             <div id='upperhalf'>
-                {columns}
+                <Routes>
+                    <Route
+                        path="/"
+                        element={columns}
+                    />
+                    <Route
+                        path="/schedule"
+                        element={<p>Hello</p>}
+                    />
+                </Routes>
             </div>
             <footer className='utilities'>
                 <Lower />
             </footer>
-        </>
+        </HashRouter>
     )
 }
 
