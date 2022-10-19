@@ -1,7 +1,8 @@
 import React from 'react'
-import Lower from './Lower';
 import { HashRouter, Link, Route, Routes } from 'react-router-dom';
+import Nav from './Nav';
 import SpreadSheets from './SpreadSheets'
+import Lower from './Lower';
 
 const Home = () => {
 
@@ -52,15 +53,20 @@ const Home = () => {
 
     return (
         <HashRouter basename="/">
-            <div id='upperhalf'>
+            <Nav />
+            <div id='content'>
                 <Routes>
                     <Route
                         path="/"
-                        element={columns}
+                        element={<div id='main-tools'>{columns}</div>}
                     />
                     <Route
-                        path="/schedule"
-                        element={<p>Hello</p>}
+                        path="/scheduling"
+                        element={<p>Scheduling</p>}
+                    />
+                    <Route
+                        path="/drafting"
+                        element={<p>Drafting</p>}
                     />
                 </Routes>
             </div>

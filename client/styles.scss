@@ -23,7 +23,21 @@ body {
   justify-content: space-between;
 }
 
-#upperhalf{
+nav{
+  ul{
+    display: flex;
+    list-style: none;
+    li{
+      border: 1px solid black;
+      margin: auto;
+      padding: 5px;
+      min-width: 50px;
+      text-align: center;
+    }
+  }
+}
+
+#main-tools{
   display: flex;
   
   .sheetcolumn {
@@ -49,6 +63,10 @@ footer {
   justify-content: space-between;
   .lower {
     border: 1px grey solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
