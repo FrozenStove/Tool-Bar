@@ -37,8 +37,19 @@ nav{
   }
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 #main-tools{
   display: flex;
+  justify-content: center;
+  // align-items: center;
+  // margin: auto;
   
   .sheetcolumn {
     display: flex;
@@ -69,6 +80,11 @@ footer {
     align-items: center;
   }
 }
+
+
+
+
+
 
 .outerBox {
   max-width: 600px;
