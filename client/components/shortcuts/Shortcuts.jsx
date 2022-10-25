@@ -1,11 +1,11 @@
 import React from 'react'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import Nav from '../Nav';
-import SpreadSheets from '../SpreadSheets'
+import SpreadSheets from './SpreadSheets'
 import Lower from '../Lower';
 import Scheduling from '../scheduling/Scheduling';
 
-const Home = () => {
+const Shortcuts = () => {
 
     const columns = [];
     const spreadSheetData = [
@@ -53,29 +53,11 @@ const Home = () => {
 
 
     return (
-        <HashRouter basename="/">
-            <Nav />
-            <div id='content'>
-                <Routes>
-                    <Route
-                        path="/"
-                        element={<div id='main-tools'>{columns}</div>}
-                    />
-                    <Route
-                        path="/scheduling"
-                        element={<Scheduling />}
-                    />
-                    <Route
-                        path="/drafting"
-                        element={<p>Drafting</p>}
-                    />
-                </Routes>
-            </div>
-            <footer className='utilities'>
-                <Lower />
-            </footer>
-        </HashRouter>
+        <div id='main-tools'>
+            {columns}
+        </div>
+
     )
 }
 
-export default Home
+export default Shortcuts
