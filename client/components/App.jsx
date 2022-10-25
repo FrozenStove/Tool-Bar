@@ -1,10 +1,9 @@
-import React from 'react'
-import { HashRouter, Link, Route, Routes } from 'react-router-dom';
-import Shortcuts from './shortcuts/Shortcuts'
+import React, { useState } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import ErrorBoundary from './ErrorBoundary'
 import Nav from './Nav';
-import SpreadSheets from './shortcuts/SpreadSheets'
 import Lower from './Lower';
+import Shortcuts from './shortcuts/Shortcuts'
 import Scheduling from './scheduling/Scheduling';
 
 
