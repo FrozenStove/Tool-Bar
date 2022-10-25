@@ -5,7 +5,7 @@ const Scheduling = (props) => {
 
     return (
         <div id='scheduling'>
-
+            <input></input>
         </div>
     )
 

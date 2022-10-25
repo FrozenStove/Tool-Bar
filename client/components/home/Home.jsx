@@ -1,8 +1,9 @@
 import React from 'react'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom';
-import Nav from './Nav';
-import SpreadSheets from './SpreadSheets'
-import Lower from './Lower';
+import Nav from '../Nav';
+import SpreadSheets from '../SpreadSheets'
+import Lower from '../Lower';
+import Scheduling from '../scheduling/Scheduling';
 
 const Home = () => {
 
@@ -62,7 +63,7 @@ const Home = () => {
                     />
                     <Route
                         path="/scheduling"
-                        element={<p>Scheduling</p>}
+                        element={<Scheduling />}
                     />
                     <Route
                         path="/drafting"
