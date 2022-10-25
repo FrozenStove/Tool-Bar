@@ -4,8 +4,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.static('dist/client'))
+
 app.get('/scheduling',
-    (req, res) => res.status(200)
+    (req, res) => res.sendStatus(200)
 );
 
 app.listen(PORT, err => {
