@@ -9,7 +9,8 @@
     "build": "webpack build",
     "dev": "concurrently \"webpack build --watch\" \"electronmon ./electron/main.js\" \"nodemon server/server.js\"",
     "package": "electron-builder",
-    "server": "nodemon server/server.js"
+    "server": "nodemon server/server.js",
+    "9090": "PORT=9090 nodemon server/server.js"
   },
   "repository": {
     "type": "git",
